@@ -6,7 +6,7 @@ layout: default
 <div class="main">
     <div class="pure-g">
         {% for post in paginator.posts %}
-        <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%Y-%m-%d" }})</sub></div>
+        <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%F" }})</sub></div>
         {% endfor %}
         <div class="pure-u-1 margin-5 pager">
             {% if paginator.previous_page %}

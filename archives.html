@@ -17,7 +17,7 @@ permalink: archives.html
         <div class="pure-u-1 head-text">{{ post.date | date: "%Y" }}</div>
         {% endif %}
         {% endunless %}
-        <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%Y-%m-%d" }})</sub></div>
+        <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%F" }})</sub></div>
         {% endfor %}
     </div>
 </div>
