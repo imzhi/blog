@@ -1,72 +1,23 @@
-<!doctype html>
-<html class="no-js" lang="zh-cn">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>存档 - IMZHI BLOG</title>
+---
+layout:    default
+title:     存档
+permalink: archives.html
+---
 
-    <!-- Set render engine for 360 browser -->
-    <meta name="renderer" content="webkit">
-
-    <!-- No Baidu Siteapp-->
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-
-    <link rel="icon" type="image/x-icon" href="assets/i/favicon.ico">
-
-    <link rel="stylesheet" href="assets/css/pure.css">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="assets/css/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="assets/css/grids-responsive-min.css">
-    <!--<![endif]-->
-    <link rel="stylesheet" href="assets/css/app.css">
-</head>
-<body>
-
-<div class="custom-menu-wrapper">
-    <div class="pure-menu custom-menu custom-menu-top">
-        <a href="/" class="pure-menu-heading custom-menu-brand">imzhi blog</a>
-        <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
-    </div>
-    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
-        <div class="custom-menu-screen"></div>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="/" class="pure-menu-link">首页</a></li>
-            <li class="pure-menu-item"><a href="/about.html" class="pure-menu-link">关于</a></li>
-            <li class="pure-menu-item"><a href="/archives.html" class="pure-menu-link">存档</a></li>
-            <li class="pure-menu-item"><a href="/tags.html" class="pure-menu-link">标签</a></li>
-        </ul>
-    </div>
-</div>
 
 <div class="main">
     <div class="pure-g">
-        <div class="pure-u-1 head-text">2015</div>
-        <div class="pure-u-1 margin-5"><a href="#" class="link">呵呵，第一篇</a> <sub>(2015-03-12)</sub></div>
-        <div class="pure-u-1 margin-5"><a href="#" class="link">利用Github进行Jekyll博客的搭建，第二篇</a> <sub>(2015-05-12)</sub></div>
-        <div class="pure-u-1 margin-5"><a href="#" class="link">利用Github进行Jekyll博客的搭建，第二篇</a> <sub>(2015-05-12)</sub></div>
-        <div class="pure-u-1 margin-5"><a href="#" class="link">利用Github进行Jekyll博客的搭建，第二篇</a> <sub>(2015-05-12)</sub></div>
-        <div class="pure-u-1 head-text">2013</div>
-        <div class="pure-u-1 margin-5"><a href="#" class="link">利用Github进行Jekyll博客的搭建，第二篇</a> <sub>(2013-05-12)</sub></div>
-        <div class="pure-u-1 margin-5"><a href="#" class="link">利用Github进行Jekyll博客的搭建，第二篇</a> <sub>(2013-05-12)</sub></div>
-        <div class="pure-u-1 margin-5"><a href="#" class="link">利用Github进行Jekyll博客的搭建，第二篇</a> <sub>(2013-05-12)</sub></div>
+        {% for post in site.posts %}
+        {% unless post.next %}
+        <div class="pure-u-1 head-text">{{ post.date | date: "%Y" }}</div>
+        {% else %}
+        {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: "%Y" }}{% endcapture %}
+        {% if year != nyear %}
+        <div class="pure-u-1 head-text">{{ post.date | date: "%Y" }}</div>
+        {% endif %}
+        {% endunless %}
+        <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%Y-%m-%d" }})</sub></div>
+        {% endfor %}
     </div>
 </div>
-
-<div class="footer">
-    <small>2015. By imzhi.</small>
-</div>
-
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-<!--<![endif]-->
-<!--[if lte IE 8 ]>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-<![endif]-->
-<script src="assets/js/app.js"></script>
-</body>
-</html>

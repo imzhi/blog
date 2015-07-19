@@ -3,4 +3,6 @@
         document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
         document.getElementById('toggle').classList.toggle('x');
     });
+
+    console.log("Hello World!");
 })(this, this.document);

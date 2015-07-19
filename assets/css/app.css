@@ -175,14 +175,18 @@
   line-height: 1.8em;
 }
 
-.author-text {
-  font-family: Helvetica, Arial, Freesans, clean, sans-serif;
-  color: #6E6C6C;
+.author-text, .tag-text {
+  margin-top: 5px;
 }
 
-.link, .plink {
+.link, .plink, .post-tag, .flink {
   text-decoration: none;
   color: #000;
+}
+
+.post-tag {
+  color: #0025B6
+  margin-right: 4px;
 }
 
 .link:hover {
@@ -190,13 +194,8 @@
   color: #008D99;
 }
 
-.plink:hover {
+.plink:hover, .post-tag:hover {
   color: #666DFF;
-}
-
-.flink {
-  color: #000;
-  text-decoration: none;
 }
 
 .flink:hover {
@@ -233,6 +232,10 @@
 
 .tag-35 {
   font-size: 1.8em;
+}
+
+.tag-45 {
+  font-size: 2em;
 }
 
 .footer {

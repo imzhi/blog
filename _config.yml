@@ -1,15 +1,16 @@
-baseurl: /
-title: IMZHI BLOG
-url: http://blog.imzhi.me/
+baseurl:        /
+asseturl:       /assets/
+title:          IMZHI BLOG
+url:            http://blog.imzhi.me/
 
-paginate: 20
-markdown: rdiscount
-paginate_path: 'blog/page:num'
+paginate:       20
+paginate_path:  '/page-:num'
+markdown:       rdiscount
 
-keywords: 个人博客
-description: 个人博客
+keywords:       个人博客
+description:    个人博客
 author:
-    name: imzhi
-    primary_email: yxz_blue@126.com
-    qq_email: yxz_blue@qq.com
-    gmail: yxzblue@gmail.com
+    name:       imzhi
+    pri_email:  yxz_blue@126.com
+    qq_email:   yxz_blue@qq.com
+    gmail:      yxzblue@gmail.com
