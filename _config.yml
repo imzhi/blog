@@ -6,8 +6,8 @@ paginate: 20
 markdown: rdiscount
 paginate_path: 'blog/page:num'
 
-keywords: 个人博客
-description: 个人博客
+keywords: 涓汉鍗氬
+description: 涓汉鍗氬
 author:
     name: imzhi
     primary_email: yxz_blue@126.com
