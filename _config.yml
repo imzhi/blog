@@ -2,6 +2,7 @@ baseurl:        /
 asseturl:       /assets/
 title:          IMZHI BLOG
 url:            http://blog.imzhi.me/
+timezone:       Asia/Chongqing
 
 paginate:       20
 paginate_path:  '/page-:num'
