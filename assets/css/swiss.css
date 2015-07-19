@@ -111,3 +111,9 @@
     background-color: inherit;
     text-decoration: none;
 }
+
+/*add by imzhi*/
+#markdown-swiss p {
+    word-break: break-word;
+    word-wrap: break-word;
+}
