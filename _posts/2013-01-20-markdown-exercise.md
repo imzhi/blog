@@ -1,7 +1,8 @@
 ---
-layout: post
-title: Markdown 练习
-tags: markdown
+layout:        post
+title:         Markdown 练习
+tags:          markdown
+allow_comment: no
 ---
 
 \# The quick brown fox jumps over the lazy dog

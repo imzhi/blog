@@ -173,3 +173,7 @@ h6, .h6 {
 .tags_ul { margin-bottom: 25px; }
 .tag_post_count { float: right; padding-top: 6px; padding-bottom: 6px; }
 .tag_panel { margin-bottom: 40px; }
+
+/* 内容页 */
+.blog_comment { margin-bottom: 30px; }
+.close_comment { color: #999; font-size: 14px; }
