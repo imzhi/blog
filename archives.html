@@ -12,7 +12,7 @@ permalink: archives.html
         {% capture post_date %}{{ post.date | date: '%B %d, %Y' }}{% endcapture %}
         {% unless post.next %}
 
-        <div class="panel panel-default tag_panel s1" id="{{ month_year_anchor }}">
+        <div class="panel panel-default tag_panel s1 {{ post.next.title }}" id="{{ month_year_anchor }}">
             <div class="panel-heading"><span class="tag_name">{{ month_year }}</span></div>
             <div class="list-group post_ul">
 
@@ -20,7 +20,7 @@ permalink: archives.html
             {% capture next_month_year %}{{ post.next.date | date: "%B %Y" }}{% endcapture %}
             {% if month_year != next_month_year %}
 
-        <div class="panel panel-default tag_panel s2" id="{{ month_year_anchor }}">
+        <div class="panel panel-default tag_panel s2 {{ post.next.title }}" id="{{ month_year_anchor }}">
             <div class="panel-heading"><span class="tag_name">{{ month_year }}</span></div>
             <div class="list-group post_ul">
 
