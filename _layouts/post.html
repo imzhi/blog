@@ -12,7 +12,7 @@ allow_comment: yes
     </div>
 </div><!-- /.blog-post -->
 
-<div class="blog_comment">
+<div class="blog_comment {{ page.allow_comment }}">
 
     {% if page.allow_comment == 'no' %}
 
