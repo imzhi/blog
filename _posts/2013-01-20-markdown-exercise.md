@@ -2,7 +2,7 @@
 layout:        post
 title:         Markdown 练习
 tags:          markdown
-allow_comment: false
+allow_comment: buxing
 ---
 
 \# The quick brown fox jumps over the lazy dog
