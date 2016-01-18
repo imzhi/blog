@@ -179,3 +179,8 @@ h6, .h6 {
 .close_comment { color: #999; font-size: 14px; }
 .blog_tags { margin-top: -10px; margin-bottom: 20px; }
 .tag_item { margin-right: 15px; }
+
+/* 404 */
+.style_404 {  margin: 100px auto; text-align: center; color: #1b6d85; font-size: 60px; }
+.back_home { margin-bottom: 50px; text-align: center; }
+.back_home a:hover { text-decoration: none; }
