@@ -14,12 +14,12 @@ allow_comment: yes
 
 <div class="blog_comment">
 
-    {% if page.allow_comment == 'yes' %}
-        {% include disqus.html %}
-    {% else %}
+    {% if page.allow_comment == 'no' %}
 
     <div class="close_comment">评论关闭。</div>
 
+    {% else %}
+        {% include disqus.html %}
     {% endif %}
 
 </div><!-- /.blog_comment -->
