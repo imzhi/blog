@@ -16,7 +16,6 @@ permalink: tags.html
 
     {% for tag in site.tags %}
 
-    <div class="pure-u-1 head-text" id="{{ tag[0] }}">{{ tag[0] }}</div>
     <div class="panel panel-default tag_panel" id="{{ tag[0] }}">
         <div class="panel-heading"><span class="tag_name">{{ tag[0] }}</span><span class="label label-default tag_post_count">{{ tag[1].size }}</span></div>
         <div class="list-group post_ul">
@@ -24,7 +23,6 @@ permalink: tags.html
         {% for post in tag[1] %}
             {% capture post_date %}{{ post.date | date: '%B %d, %Y' }}{% endcapture %}
 
-            <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%F" }})</sub></div>
             <a class="list-group-item" href="{{ post.url }}"><span class="item_title">{{ post.title }}</span><span class="item_date">{{ post_date }}</span></a>
 
         {% endfor %}

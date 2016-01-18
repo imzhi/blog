@@ -29,13 +29,14 @@ permalink: archives.html
 
                 <a class="list-group-item" href="{{ post.url }}"><span class="item_title">{{ post.title }}</span><span class="item_date">{{ post_date }}</span></a>
 
-        {% unless post.next %}
-        {% else %}
+        {% if post.next %}
+            {% if month_year != next_month_year %}
 
             </div>
         </div>
 
-        {% endunless %}
+            {% endif %}
+        {% endif %}
     {% endfor %}
 
 </section>
