@@ -1,6 +1,6 @@
 ---
 layout:        default
-allow_comment: true
+allow_comment: keyi
 ---
 <div class="blog-post">
     <h2 class="blog-post-title">{{ page.title }}</h2>
@@ -12,14 +12,8 @@ allow_comment: true
     </div>
 </div><!-- /.blog-post -->
 
-<div class="blog_comment {{ page.layout }}">
+<div class="blog_comment {{ page.allow_comment }}">
 
-    {% if page.allow_comment == 'no' %}
-
-    <div class="close_comment">评论关闭。</div>
-
-    {% else %}
         {% include disqus.html %}
-    {% endif %}
 
 </div><!-- /.blog_comment -->
