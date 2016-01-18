@@ -2,8 +2,8 @@
 layout:        post
 title:         Markdown 练习
 tags:          markdown
-allow_comment: buxing
 ---
+*上面一行是MD代码，下面一行是效果:*
 
 \# The quick brown fox jumps over the lazy dog
 
@@ -29,40 +29,38 @@ allow_comment: buxing
 
 ###### The quick brown fox jumps over the lazy dog
 
-\<strike>The quick brown fox jumps over the lazy dog\</strike>
+&lt;strike&gt;The quick brown fox jumps over the lazy dog\&lt;/strike&gt;
 
 <strike>The quick brown fox jumps over the lazy dog</strike>
 
-\> The quick brown fox jumps over the lazy dog
+&gt; The quick brown fox jumps over the lazy dog
 
 > The quick brown fox jumps over the lazy dog
 
-\>>
+&gt;&gt; The quick brown fox jumps over the lazy dog
 
 >> The quick brown fox jumps over the lazy dog
 
-\* The quick brown fox jumps over the lazy dog  
+\* The quick brown fox jumps over the lazy dog
 \* The quick brown fox jumps over the lazy dog
 
 * The quick brown fox jumps over the lazy dog
 * The quick brown fox jumps over the lazy dog
 
-2\. The quick brown fox jumps over the lazy dog  
+2\. The quick brown fox jumps over the lazy dog
 5\. The quick brown fox jumps over the lazy dog
 
 2. The quick brown fox jumps over the lazy dog
 5. The quick brown fox jumps over the lazy dog
 
-Special: 1988\\. I have a date. -> 1988\. I have a date.
-
 The quick brown \`fox\` jumps over the lazy dog
 
 The quick brown `fox` jumps over the lazy dog
 
-\<Tab>The quick brown fox jumps over the lazy dog  
-\<Tab>The quick brown fox jumps over the lazy dog
+&lt;Tab&gt; The quick brown fox jumps over the lazy dog
+&lt;Tab&gt; quick brown fox jumps over the lazy dog
 
-	The quick brown fox jumps over the lazy dog
+    The quick brown fox jumps over the lazy dog
 	The quick brown fox jumps over the lazy dog
 	
 \***
@@ -85,11 +83,11 @@ The quick brown [fox](http://www.mozilla.org/ "firefox") jumps over the lazy dog
 
 ![Firefox](http://t2.qpic.cn/mblogpic/2ede4930e841f47a95d0/460 "Firefox")
 
-\<http://www.wikipedia.org/>
+&lt;http://www.wikipedia.org&gt;
 
 <http://www.wikipedia.org/>
 
-\<someone@mail.com>
+&lt;someone@mail.com&gt;
 
 <someone@mail.com>
 
