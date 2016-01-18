@@ -168,3 +168,8 @@ h6, .h6 {
 /* 首页列表 */
 .post_ul .item_date { float: right; }
 .list-group-item { padding-top: 20px; padding-bottom: 20px; }
+
+/* 标签页 */
+.tags_ul { margin-bottom: 25px; }
+.tag_post_count { float: right; padding-top: 6px; padding-bottom: 6px; }
+.tag_panel { margin-bottom: 40px; }
