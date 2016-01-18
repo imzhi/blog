@@ -1,67 +1,89 @@
-<!doctype html>
-<html class="no-js" lang="zh-cn">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ site.author.name }}" />
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="{{ site.keywords }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <title>{% if page.title %}{{ page.title}} - {% endif %}{{ site.title }}</title>
-
-    <!-- Set render engine for 360 browser -->
-    <meta name="renderer" content="webkit">
-
-    <!-- No Baidu Siteapp-->
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-
-    <link rel="icon" type="image/x-icon" href="{{ site.asseturl }}i/favicon.ico">
-
-    <link rel="stylesheet" href="{{ site.asseturl }}css/pure.css">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="{{ site.asseturl }}css/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="{{ site.asseturl }}css/grids-responsive-min.css">
-    <!--<![endif]-->
-    <link rel="stylesheet" href="{{ site.asseturl }}css/swiss.css">
-    <link rel="stylesheet" href="{{ site.asseturl }}css/app.css">
-    
-    {% include bdstatic.html %}
-    
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
 </head>
 <body>
-
-<div class="custom-menu-wrapper">
-    <div class="pure-menu custom-menu custom-menu-top">
-        <a href="/" class="pure-menu-heading custom-menu-brand">imzhi blog</a>
-        <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
-    </div>
-    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
-        <div class="custom-menu-screen"></div>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="/" class="pure-menu-link">首页</a></li>
-            <li class="pure-menu-item"><a href="/about.html" class="pure-menu-link">关于</a></li>
-            <li class="pure-menu-item"><a href="/archives.html" class="pure-menu-link">存档</a></li>
-            <li class="pure-menu-item"><a href="/tags.html" class="pure-menu-link">标签</a></li>
-        </ul>
+<div class="blog-masthead">
+    <div class="container">
+        <nav class="blog-nav">
+            <a class="blog-nav-item active" href="/">且听风吟技术博客</a>
+            <a class="blog-nav-item" href="/archives.html">Archives</a>
+            <a class="blog-nav-item" href="/tags.html">Tags</a>
+        </nav>
     </div>
 </div>
 
-{{ content }}
+<div class="container">
 
-<div class="footer">
-    <small>2013-2015. By imzhi. Powerd by GitHub Pages.</small>
-    <br>
-    <small>Generate time: {{ site.time | date: "%F %H:%M" }}.</small>
-</div>
+    <div class="blog-header">
+        <h1 class="blog-title">{{ site.title }}</h1>
+        <p class="lead blog-description">{{ site.title_description }}</p>
+    </div>
 
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-<!--<![endif]-->
-<!--[if lte IE 8 ]>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-<![endif]-->
-<script src="{{ site.asseturl }}js/app.js"></script>
+    <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+            {{ content }}
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+                <h4>About</h4>
+                <p>imzhi.</p>
+            </div>
+            <div class="sidebar-module">
+                <h4>Archives</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">March 2014</a></li>
+                    <li><a href="#">February 2014</a></li>
+                    <li><a href="#">January 2014</a></li>
+                    <li><a href="#">December 2013</a></li>
+                    <li><a href="#">November 2013</a></li>
+                    <li><a href="#">October 2013</a></li>
+                    <li><a href="#">September 2013</a></li>
+                    <li><a href="#">August 2013</a></li>
+                    <li><a href="#">July 2013</a></li>
+                    <li><a href="#">June 2013</a></li>
+                    <li><a href="#">May 2013</a></li>
+                    <li><a href="#">April 2013</a></li>
+                </ol>
+            </div>
+            <div class="sidebar-module">
+                <h4>Elsewhere</h4>
+                <ol class="list-unstyled">
+                    <li><a href="https://github.com/imzhi" target="_blank" rel="nofollow">Github</a></li>
+                    <li><a href="https://coding.net/u/imzhi" target="_blank" rel="nofollow">Coding.net</a></li>
+                    <li><a href="http://segmentfault.com/u/imzhi" target="_blank" rel="nofollow">Segmentfault</a></li>
+                </ol>
+            </div>
+        </div><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+</div><!-- /.container -->
+
+<footer class="blog-footer">
+    <p>Blog template built for <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a> by <a href="https://twitter.com/mdo" rel="nofollow">@mdo</a>.</p>
+    <p>2016. imzhi &copy;. <i style="color: #ff7580;">&hearts;</i></p>
+    <p><a href="javascript:" id="go_top">Back to top</a></p>
+</footer>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="./assets/js/blog.js"></script>
+
+{% include ga.html %}
+
 </body>
 </html>

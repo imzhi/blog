@@ -1,23 +1,46 @@
 ---
 layout:    default
-title:     存档
+title:     Archives
 permalink: archives.html
 ---
+<section class="list_section">
 
-
-<div class="main">
-    <div class="pure-g">
-        {% for post in site.posts %}
+    {% for post in site.posts %}
+        {% capture month_year %}{{ post.date | date: "%B %Y" }}{% endcapture %}
+        {% capture month_year_anchor %}{{ post.date | date: "%B_%Y" }}{% endcapture %}
+        {% capture post_date %}{{ post.date | date: '%B %d, %Y' }}{% endcapture %}
         {% unless post.next %}
-        <div class="pure-u-1 head-text">{{ post.date | date: "%Y" }}</div>
+
+        <div class="panel panel-default tag_panel" id="{{ month_year_anchor }}">
+            <div class="panel-heading"><span class="tag_name">{{ month_year }}</span></div>
+            <div class="list-group post_ul">
+
         {% else %}
-        {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: "%Y" }}{% endcapture %}
-        {% if year != nyear %}
-        <div class="pure-u-1 head-text">{{ post.date | date: "%Y" }}</div>
-        {% endif %}
+            {% capture next_month_year %}{{ post.next.date | date: "%B %Y" }}{% endcapture %}
+            {% if month_year != next_month_year %}
+
+            <div class="panel panel-default tag_panel" id="{{ month_year_anchor }}">
+                <div class="panel-heading"><span class="tag_name">{{ month_year }}</span></div>
+                <div class="list-group post_ul">
+
+            {% endif %}
         {% endunless %}
-        <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%F" }})</sub></div>
-        {% endfor %}
-    </div>
-</div>
+
+        <a class="list-group-item" href="{{ post.url }}"><span class="item_title">{{ post.title }}</span><span class="item_date">{{ post_date }}</span></a>
+
+        {% unless post.next %}
+
+            </div>
+        </div>
+
+        {% else %}
+            {% if month_year != next_month_year %}
+
+                </div>
+            </div>
+
+            {% endif %}
+        {% endunless %}
+    {% endfor %}
+
+</section>

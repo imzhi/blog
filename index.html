@@ -1,24 +1,21 @@
 ---
 layout: default
 ---
-
-
-<div class="main">
-    <div class="pure-g">
+<section class="list_section">
+    <div class="list-group post_ul">
         {% for post in paginator.posts %}
-        <div class="pure-u-1 margin-5"><a href="{{ post.url }}" class="link">{{ post.title }}</a> <sub>({{ post.date | date: "%F" }})</sub></div>
+        <a class="list-group-item" href="{{ post.url }}"><span class="item_title">{{ post.title }}</span><span class="item_date">{{ post.date | date: '%B %d, %Y' }}</span></a>
         {% endfor %}
-        <div class="pure-u-1 margin-5 pager">
-            {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="pure-button">&nbsp;&larr;&nbsp;</a>
-            {% else %}
-            <a href="javascript:;" class="pure-button pure-button-disabled">&nbsp;&larr;&nbsp;</a>
-            {% endif %}
-            {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="pure-button">&nbsp;&rarr;&nbsp;</a>
-            {% else %}
-            <a href="javascript:;" class="pure-button pure-button-disabled">&nbsp;&rarr;&nbsp;</a>
-            {% endif %}
-        </div>
     </div>
-</div>
+</section>
+
+<nav>
+    <ul class="pager">
+        {% if paginator.previous_page %}
+        <li class="previous"><a href="{{ paginator.previous_page_path }}">&laquo;</a></li>
+        {% endif %}
+        {% if paginator.next_page %}
+        <li class="next"><a href="{{ paginator.next_page_path }}">&raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
