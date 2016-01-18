@@ -10,15 +10,16 @@ allow_comment: yes
         {{ content }}
 
     </div>
-    <div class="blog_comment">
-
-        {% if page.allow_comment == 'yes' %}
-            {% include disqus.html %}
-        {% else %}
-
-        <div class="close_comment">评论关闭。</div>
-
-        {% endif %}
-
-    </div>
 </div><!-- /.blog-post -->
+
+<div class="blog_comment">
+
+    {% if page.allow_comment == 'yes' %}
+        {% include disqus.html %}
+    {% else %}
+
+    <div class="close_comment">评论关闭。</div>
+
+    {% endif %}
+
+</div><!-- /.blog_comment -->
