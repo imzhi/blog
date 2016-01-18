@@ -4,6 +4,21 @@ layout:        default
 <div class="blog-post">
     <h2 class="blog-post-title">{{ page.title }}</h2>
     <p class="blog-post-meta">{{ page.date | date: '%B %d, %Y' }} by {{ site.author.name }}.</p>
+
+    {% if page.tags != empty %}
+
+    <div class="blog_tags">
+
+        {% for tag in page.tags %}
+
+        <a href="/tags.html#{{ tag }}" class="tag_item">#{{ tag }}</a>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
     <div class="blog_content">
 
         {{ content }}
