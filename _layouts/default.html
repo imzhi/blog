@@ -16,9 +16,9 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
-            <a class="blog-nav-item active" href="/">且听风吟技术博客</a>
-            <a class="blog-nav-item" href="/archives.html">Archives</a>
-            <a class="blog-nav-item" href="/tags.html">Tags</a>
+            <a class="blog-nav-item {% if !page.title %}active{% endif %}" href="/">且听风吟技术博客</a>
+            <a class="blog-nav-item {% if page.header_t and page.header_t == 'Archives' %}active{% endif %}" href="/archives.html">Archives</a>
+            <a class="blog-nav-item {% if page.header_t and page.header_t == 'Tags' %}active{% endif %}" href="/tags.html">Tags</a>
         </nav>
     </div>
 </div>
