@@ -26,8 +26,8 @@
 <div class="container">
 
     <div class="blog-header">
-        <h1 class="blog-title">{{ site.title }}</h1>
-        <p class="lead blog-description">{{ site.sub_title }}</p>
+        <h1 class="blog-title">{% if page.header_t %}{{ page.header_t }}{% else %}{{ site.title }}{% endif %}</h1>
+        <p class="lead blog-description">{% if page.header_st %}{{ page.header_st }}{% else %}{{ site.sub_title }}{% endif %}</p>
     </div>
 
     <div class="row">
@@ -46,20 +46,26 @@
             <div class="sidebar-module">
                 <h4>Archives</h4>
                 <ol class="list-unstyled">
-                    <li><a href="#">March 2014</a></li>
-                    <li><a href="#">February 2014</a></li>
-                    <li><a href="#">January 2014</a></li>
-                    <li><a href="#">December 2013</a></li>
-                    <li><a href="#">November 2013</a></li>
-                    <li><a href="#">October 2013</a></li>
-                    <li><a href="#">September 2013</a></li>
-                    <li><a href="#">August 2013</a></li>
-                    <li><a href="#">July 2013</a></li>
-                    <li><a href="#">June 2013</a></li>
-                    <li><a href="#">May 2013</a></li>
-                    <li><a href="#">April 2013</a></li>
+
+                    {% for post in site.posts %}
+                        {% capture month_year %}{{ post.date | date: "%B %Y" }}{% endcapture %}
+                        {% capture month_year_anchor %}{{ post.date | date: "%B_%Y" }}{% endcapture %}
+                        {% unless post.next %}
+
+                    <li><a href="/archives.html#{{ month_year_anchor }}">{{ month_year }}</a></li>
+
+                        {% else %}
+                            {% capture next_month_year %}{{ post.next.date | date: "%B %Y" }}{% endcapture %}
+                            {% if month_year != next_month_year %}
+
+                    <li><a href="/archives.html#{{ month_year_anchor }}">{{ month_year }}</a></li>
+
+                            {% endif %}
+                        {% endunless %}
+                    {% endfor %}
+
                 </ol>
-            </div>
+            </div><!-- /.sidebar-module -->
             <div class="sidebar-module">
                 <h4>Elsewhere</h4>
                 <ol class="list-unstyled">

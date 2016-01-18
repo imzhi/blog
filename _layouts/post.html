@@ -1,18 +1,17 @@
 ---
 layout: default
 ---
+<div class="blog-post">
+    <h2 class="blog-post-title">{{ page.title }}</h2>
+    <p class="blog-post-meta">{{ page.date | date: '%B %d, %Y' }} by {{ site.author.name }}.</p>
+    <div class="blog_content">
 
+        {{ content }}
 
-<div class="main">
-    <div class="title-text">{{ page.title }}</div>
-    <div class="author-text">By {{ site.author.name }} at {{ page.date | date: "%Y/%m/%d" }}</div>
-    {% if page.tags != empty %}
-    <div class="tag-text">{% for tag in page.tags %}<a href="{{ site.baseurl }}tags.html#{{ tag }}" class="post-tag">#{{ tag }}</a>{% endfor %}</div>
-    {% endif %}
-    <div class="pure-g" style="letter-spacing: normal;">
-        <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-1" id="markdown-swiss">{{ content }}</div>
     </div>
+    <div class="blog_comment">
 
-    {% include duoshuo.html %}
+        {% include disqus.html %}
 
-</div>
+    </div>
+</div><!-- /.blog-post -->
