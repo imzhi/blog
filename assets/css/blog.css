@@ -30,6 +30,10 @@ h6, .h6 {
   }
 }
 
+@media (max-width: 480px) {
+  .item_date { line-height: 27px; font-size: 16px; }
+}
+
 
 /*
  * Masthead for nav
@@ -166,6 +170,7 @@ h6, .h6 {
 }
 
 /* 首页列表 */
+.post_ul .list-group-item { overflow: hidden; text-overflow: ellipsis; white-space:nowrap; }
 .post_ul .item_date { float: right; }
 .list-group-item { padding-top: 20px; padding-bottom: 20px; }
 
