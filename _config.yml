@@ -1,6 +1,6 @@
 baseurl:        /
 asseturl:       /assets/
-title:          且听风吟技术博客
+title:          imzhi的个人博客
 sub_title:      再也无须前思后想，一切岂非已然过往。
 url:            http://blog.imzhi.me/
 timezone:       Asia/Chongqing
@@ -9,8 +9,8 @@ paginate:       20
 paginate_path:  '/page-:num'
 markdown:       rdiscount
 
-keywords:       且听风吟技术博客
-description:    且听风吟技术博客
+keywords:       imzhi的个人博客
+description:    imzhi的个人博客
 author:
     true_name:  杨晓智
     name:       imzhi
