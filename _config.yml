@@ -7,7 +7,7 @@ timezone:       Asia/Chongqing
 
 paginate:       20
 paginate_path:  '/page-:num'
-markdown:       rdiscount
+markdown:       kramdown
 
 keywords:       imzhi的个人博客
 description:    imzhi的个人博客
