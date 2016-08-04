@@ -1,0 +1,26 @@
+---
+layout: default
+title: 标签
+permalink: tag.html
+---
+<div class="w3-row w3-margin-bottom site-tag">
+    <div class="w3-half div-center">
+        {% for tag in site.tags %}
+        <a href="#{{ tag[0] }}"><span class="w3-tag w3-light-grey w3-round">{{ tag[0] }}</span></a>
+        {% endfor %}
+    </div>
+</div>
+{% for tag in site.tags %}
+<div class="w3-row w3-center w3-margin-bottom site-tag-head">
+    <ul class="w3-half w3-panel w3-light-grey w3-padding-8 w3-card-2 div-center" id="{{ tag[0] }}"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></ul>
+</div>
+<div class="w3-row w3-center site-list-wrap">
+    <ul class="w3-half w3-ul w3-border w3-card-4 div-center site-list">
+        {% for post in tag[1] %}
+        <li class="w3-padding-16 w3-padding-left w3-padding-right w3-clear">
+            <a href="{{ post.url }}"><span class="p-title w3-left">{{ post.title }}</span></a><span class="p-date w3-right">{{ post.date | date: "%Y年%m月%d日" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}

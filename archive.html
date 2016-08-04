@@ -1,0 +1,32 @@
+---
+layout: default
+title: 存档
+permalink: archive.html
+---
+{% for post in site.posts %}
+    {% capture year_month %}{{ post.date | date: "%Y年%m月" }}{% endcapture %}
+    {% capture year_month_anchor %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+    {% unless post.next %}
+    <div class="w3-row w3-center w3-margin-bottom">
+        <ul class="w3-half w3-panel w3-light-grey w3-padding-8 w3-card-2 div-center">{{ post.date | date: "%Y年%m月" }}</ul>
+    </div>
+    <div class="w3-row w3-center site-list-wrap">
+        <ul class="w3-half w3-ul w3-border w3-card-4 div-center site-list">
+    {% else %}
+        {% capture next_year_month %}{{ post.next.date | date: "%Y年%m月" }}{% endcapture %}
+        {% if year_month != next_year_month %}
+        </ul>
+    </div>
+    <div class="w3-row w3-center w3-margin-bottom">
+        <ul class="w3-half w3-panel w3-light-grey w3-padding-8 w3-card-2 div-center">{{ post.date | date: "%Y年%m月" }}</ul>
+    </div>
+    <div class="w3-row w3-center site-list-wrap">
+        <ul class="w3-half w3-ul w3-border w3-card-4 div-center site-list">
+        {% endif %}
+    {% endunless %}
+            <li class="w3-padding-16 w3-padding-left w3-padding-right w3-clear">
+                <a href="{{ post.url }}"><span class="p-title w3-left">{{ post.title }}</span></a><span class="p-date w3-right">{{ post.date | date: "%Y年%m月%d日" }}</span>
+            </li>
+{% endfor %}
+        </ul>
+    </div>

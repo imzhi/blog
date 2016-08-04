@@ -1,17 +1,13 @@
-baseurl:        /
-asseturl:       /assets/
-title:          imzhi的个人博客
-sub_title:      再也无须前思后想，一切岂非已然过往。
-url:            http://blog.imzhi.me/
-timezone:       Asia/Chongqing
+baseurl: /
+asseturl: /assets/
+title: imzhi的个人博客
+url: http://blog.imzhi.me/
+timezone: Asia/Chongqing
 
-paginate:       20
-paginate_path:  '/page-:num'
-markdown:       kramdown
+paginate: 20
+paginate_path: page-:num'
+markdown: kramdown
 
-keywords:       imzhi的个人博客
-description:    imzhi的个人博客
-author:
-    true_name:  杨晓智
-    name:       imzhi
-    email:      yxz_blue@126.com
+author: imzhi的个人博客
+description: imzhi的个人博客
+keywords: imzhi,PHP,Web,技术,个人博客

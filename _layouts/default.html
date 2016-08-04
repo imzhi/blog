@@ -8,89 +8,29 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="{{ site.keywords }}">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>{% if page.title %}{{ page.title}} - {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/bw.css">
-    <link rel="stylesheet" href="/assets/css/blog.css">
+    <title>{% if page.title %}{{ page.title}} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/w3.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/bw.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/app.css">
 </head>
 <body>
-<div class="blog-masthead">
-    <div class="container">
-        <nav class="blog-nav">
-            <a class="blog-nav-item {% unless page.title %}active{% endunless %}" href="/">首页</a>
-            <a class="blog-nav-item {% if page.header_t == 'Archives' %}active{% endif %}" href="/archives.html">Archives</a>
-            <a class="blog-nav-item {% if page.header_t == 'Tags' %}active{% endif %}" href="/tags.html">Tags</a>
-        </nav>
-    </div>
+<div class="site-wrap">
+    <header class="w3-light-blue w3-padding-16 w3-center site-header">
+        <h1 class="site-title w3-padding-8">imzhi的个人博客</h1>
+        <ul class="w3-navbar w3-theme w3-center">
+            <li><a href="{{ site.baseurl }}" class="w3-hover-white w3-theme w3-padding-8">首页</a></li>
+            <li><a href="{{ site.baseurl }}archive.html" class="w3-hover-white w3-theme w3-padding-8">存档</a></li>
+            <li><a href="{{ site.baseurl }}tag.html" class="w3-hover-white w3-theme w3-padding-8">标签</a></li>
+        </ul>
+    </header>
+    <div class="w3-large site-main">{{ content }}</div>
+    <footer class="w3-pale-green w3-padding-8 w3-center w3-text-grey site-footer">
+        <small>imzhi &copy; 2016.</small>
+    </footer>
 </div>
-
-<div class="container">
-
-    <div class="blog-header">
-        <h1 class="blog-title">{% if page.header_t %}{{ page.header_t }}{% else %}{{ site.title }}{% endif %}</h1>
-        <p class="lead blog-description">{% if page.header_st %}{{ page.header_st }}{% else %}{{ site.sub_title }}{% endif %}</p>
-    </div>
-
-    <div class="row">
-
-        <div class="col-sm-8 blog-main">
-
-            {{ content }}
-
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-            <div class="sidebar-module sidebar-module-inset">
-                <h4>About</h4>
-                <p>imzhi.</p>
-            </div>
-            <div class="sidebar-module">
-                <h4>Archives</h4>
-                <ol class="list-unstyled">
-
-                    {% for post in site.posts %}
-                        {% capture month_year %}{{ post.date | date: "%B %Y" }}{% endcapture %}
-                        {% capture month_year_anchor %}{{ post.date | date: "%B_%Y" }}{% endcapture %}
-                        {% unless post.next %}
-
-                    <li><a href="/archives.html#{{ month_year_anchor }}">{{ month_year }}</a></li>
-
-                        {% else %}
-                            {% capture next_month_year %}{{ post.next.date | date: "%B %Y" }}{% endcapture %}
-                            {% if month_year != next_month_year %}
-
-                    <li><a href="/archives.html#{{ month_year_anchor }}">{{ month_year }}</a></li>
-
-                            {% endif %}
-                        {% endunless %}
-                    {% endfor %}
-
-                </ol>
-            </div><!-- /.sidebar-module -->
-            <div class="sidebar-module">
-                <h4>Elsewhere</h4>
-                <ol class="list-unstyled">
-                    <li><a href="https://github.com/imzhi" target="_blank" rel="nofollow">Github</a></li>
-                    <li><a href="https://coding.net/u/imzhi" target="_blank" rel="nofollow">Coding.net</a></li>
-                    <li><a href="http://segmentfault.com/u/imzhi" target="_blank" rel="nofollow">Segmentfault</a></li>
-                </ol>
-            </div>
-        </div><!-- /.blog-sidebar -->
-
-    </div><!-- /.row -->
-
-</div><!-- /.container -->
-
-<footer class="blog-footer">
-    <p>Blog template built for <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a> by <a href="https://twitter.com/mdo" rel="nofollow">@mdo</a>.</p>
-    <p>2016. imzhi &copy;. <i style="color: #ff7580;">&hearts;</i></p>
-    <p><a href="javascript:" id="go_top">Back to top</a></p>
-</footer>
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="/assets/js/blog.js"></script>
-
+<script type="text/javascript" src="{{ site.asseturl }}js/jquery.min.js"></script>
+<script type="text/javascript" src="{{ site.asseturl }}js/app.js"></script>
 {% include ga.html %}
-
 </body>
 </html>

@@ -1,0 +1,81 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue", "微软雅黑", Helvetica, Arial, sans-serif !important;
+}
+
+.site-title {
+    letter-spacing: 2px;
+    margin: 0;
+    color: #fff;
+}
+
+.site-header .w3-navbar li {
+    display: inline-block;
+    float: none;
+    color: #fff;
+}
+
+.site-main {
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.div-center {
+    float: none;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /*margin: 0 auto !important;*/
+}
+
+.site-list-wrap {
+    margin: 0 0 30px 0;
+}
+
+.site-list a:hover {
+    color: blue;
+}
+
+.p-title, .p-date {
+    margin: 5px 0;
+}
+
+.site-list-page {
+    margin: 20px 0 0;
+}
+
+/* 存档 */
+.site-main .site-list-wrap:last-child {
+    margin: 0;
+}
+
+/* 标签 */
+.site-tag {
+    margin-bottom: 20px !important;
+}
+
+.site-tag span {
+    font-size: 16px;
+    margin-bottom: 6px;
+    padding: 8px;
+}
+
+.site-tag-head a {
+    text-decoration: none;
+}
+
+/* 文章 */
+.site-article-tag {
+    margin-bottom: 0 !important;
+}
+
+.site-article-info {
+    font-size: 16px;
+}
+
+.highlight {
+    margin: 0;
+}
+
+.highlight * {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+}
