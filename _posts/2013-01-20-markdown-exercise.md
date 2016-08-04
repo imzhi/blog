@@ -112,9 +112,9 @@ The quick brown [fox](http://www.mozilla.org/ "firefox") jumps over the lazy dog
 {% highlight php %}
 <?php
 class commonAction extends Action {
-	function index() {
-		$this->display();
-		exit;
-	}
+    function index() {
+        $this->display();
+        exit;
+    }
 }
 {% endhighlight %}
