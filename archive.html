@@ -7,7 +7,7 @@ permalink: archive.html
     {% capture year_month %}{{ post.date | date: "%Y年%m月" }}{% endcapture %}
     {% capture year_month_anchor %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
     {% unless post.next %}
-    <div class="w3-row w3-center w3-margin-bottom">
+    <div class="w3-row w3-center">
         <ul class="w3-half w3-panel w3-light-grey w3-padding-8 w3-card-2 div-center">{{ post.date | date: "%Y年%m月" }}</ul>
     </div>
     <div class="w3-row w3-center site-list-wrap">
@@ -17,7 +17,7 @@ permalink: archive.html
         {% if year_month != next_year_month %}
         </ul>
     </div>
-    <div class="w3-row w3-center w3-margin-bottom">
+    <div class="w3-row w3-center">
         <ul class="w3-half w3-panel w3-light-grey w3-padding-8 w3-card-2 div-center">{{ post.date | date: "%Y年%m月" }}</ul>
     </div>
     <div class="w3-row w3-center site-list-wrap">
