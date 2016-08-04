@@ -5,11 +5,12 @@ layout: default
     <ul class="w3-half w3-ul w3-border w3-card-4 div-center site-list">
         {% for post in paginator.posts %}
         <li class="w3-padding-16 w3-padding-left w3-padding-right w3-clear">
-            <a href="{{ post.url }}"><span class="p-title w3-left">{{ post.title }}</span></a><span class="p-date w3-right">{{ page.date | date: "%Y年%m月%d日" }}</span>
+            <a href="{{ post.url }}"><span class="p-title w3-left">{{ post.title }}</span></a><span class="p-date w3-right">{{ post.date | date: "%Y年%m月%d日" }}</span>
         </li>
         {% endfor %}
     </ul>
 </div>
+{% if paginator.previous_page or paginator.next_page %}
 <div class="w3-center site-list-page">
     <ul class="w3-pagination w3-border w3-round">
         {% if paginator.previous_page %}
@@ -20,3 +21,4 @@ layout: default
         {% endif %}
     </ul>
 </div>
+{% endif %}
