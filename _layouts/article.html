@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="w3-row w3-margin-bottom">
     <h1 class="w3-half w3-margin-bottom w3-center div-center site-article-title">{{ page.title }}</h1>
-    <div class="w3-half w3-margin-bottom w3-center div-center site-article-info"><span>{{ page.date | date: "%Y年%m月" }}</span></div>
+    <div class="w3-half w3-margin-bottom w3-center div-center site-article-info"><span>{{ page.date | date: ""%Y年%m月%d日" }}</span></div>
     {% if page.tags != empty %}
     <div class="w3-half w3-margin-bottom w3-center div-center site-tag site-article-tag">
         {% for tag in page.tags %}
