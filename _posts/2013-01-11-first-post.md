@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 你好，这个世界
 tags: 未分类
 ---

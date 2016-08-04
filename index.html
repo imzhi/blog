@@ -1,14 +1,6 @@
 ---
 layout: default
 ---
-<section class="list_section">
-    <div class="list-group post_ul">
-        {% for post in paginator.posts %}
-        <a class="list-group-item" href="{{ post.url }}"><span class="item_title">{{ post.title }}</span><span class="item_date">{{ post.date | date: '%B %d, %Y' }}</span></a>
-        {% endfor %}
-    </div>
-</section>
-
 <div class="w3-row w3-center">
     <ul class="w3-half w3-ul w3-border w3-card-4 div-center site-list">
         {% for post in paginator.posts %}
