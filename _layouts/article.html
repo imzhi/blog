@@ -1,15 +1,18 @@
 ---
 layout: default
 ---
-<div class="w3-row w3-margin-bottom">
-    <h1 class="w3-half w3-margin-bottom w3-center div-center site-article-title">{{ page.title }}</h1>
-    <div class="w3-half w3-margin-bottom w3-center div-center site-article-info"><span>{{ page.date | date: "%Y年%m月%d日" }}</span></div>
+<div class="w3-row">
+  <div class="w3-half w3-center article-wrap">
+    <h1 class="w3-margin-bottom site-article-title">{{ page.title }}</h1>
+    <div class="w3-margin-bottom site-article-info"><span>{{ page.date | date: "%Y年%m月%d日" }}</span></div>
     {% if page.tags != empty %}
-    <div class="w3-half w3-margin-bottom w3-center div-center site-tag site-article-tag">
-        {% for tag in page.tags %}
-        <a href="{{ baseurl }}tag.html#{{ tag }}"><span class="w3-tag w3-light-grey w3-round">{{ tag }}</span></a>
-        {% endfor %}
+    <div class="w3-margin-bottom site-tag site-article-tag">
+      {% for tag in page.tags %}
+      <a href="{{ baseurl }}tag.html#{{ tag }}" class="no-decoration">#{{ tag }}</a>
+      {% endfor %}
     </div>
     {% endif %}
+    <article class="markdown-body w3-margin-top">{{ content }}</article>
+  </div>
 </div>
-<article class="w3-half div-center markdown-body">{{ content }}</article>
+
