@@ -56,24 +56,7 @@
       </ul>
       <h4><a href="{{ site.baseurl }}" class="text-muted">{{ site.author }}</a></h4>
     </header>
-    <div class="text-center main">
-      <ul class="list-unstyled clearfix">
-        {% for post in paginator.posts %}
-        <li>
-          <a href="{{ post.url }}" class="pull-left">{{ post.title }}</a>
-          <span class="text-muted pull-right">{{ post.date | date: "%m/%d/%Y" }}</span>
-        </li>
-        {% endfor %}
-      </ul>
-      <ul class="list-unstyled page-style">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}">上页</a>
-        {% endif %}
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">下页</a>
-        {% endif %}
-      </ul>
-    </div>
+    <div class="text-center main">{{ content }}</div>
   </div>
   {% include bdstatic.html %}
 </body>

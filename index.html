@@ -2,27 +2,19 @@
 layout: default
 id: index
 ---
-<div class="w3-row w3-center">
-  <ul class="w3-half w3-ul div-center">
-    {% for post in paginator.posts %}
-    <li class="w3-padding-8 w3-padding-right w3-clear">
-      <a href="{{ post.url }}" class="w3-text-dark-grey">
-        <span class="p-title w3-left">{{ post.title }}</span>
-        <span class="p-date w3-right">{{ post.date | date: "%Y年%m月%d日" }}</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
-{% if paginator.previous_page or paginator.next_page %}
-<div class="w3-center site-list-page">
-  <ul class="w3-pagination w3-border w3-round">
-    {% if paginator.previous_page %}
-    <li><a href="{{ paginator.previous_page_path }}"> &laquo; </a></li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li><a href="{{ paginator.next_page_path }}"> &raquo; </a></li>
-    {% endif %}
-  </ul>
-</div>
-{% endif %}
+<ul class="list-unstyled clearfix">
+  {% for post in paginator.posts %}
+  <li>
+    <a href="{{ post.url }}" class="pull-left">{{ post.title }}</a>
+    <span class="text-muted pull-right">{{ post.date | date: "%m/%d/%Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>
+<ul class="list-unstyled page-style">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}">上页</a>
+  {% endif %}
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}">下页</a>
+  {% endif %}
+</ul>
