@@ -44,43 +44,35 @@
   <div class="container">
     <header class="header">
       <ul class="nav pull-right header-nav">
-        <li class="active"><a href="{{ site.baseurl }}">首页</a></li>
-        <li><a href="{{ site.baseurl }}archive.html">存档</a></li>
-        <li><a href="{{ site.baseurl }}tag.html">标签</a></li>
+        <li class="{% if page.id == 'index' %}active{% endif %}">
+          <a href="{{ site.baseurl }}">首页</a>
+        </li>
+        <li class="{% if page.id == 'archive' %}active{% endif %}">
+          <a href="{{ site.baseurl }}archive.html">存档</a>
+        </li>
+        <li class="{% if page.id == 'tag' %}active{% endif %}">
+          <a href="{{ site.baseurl }}tag.html">标签</a>
+        </li>
       </ul>
       <h4><a href="{{ site.baseurl }}" class="text-muted">{{ site.author }}</a></h4>
     </header>
     <div class="text-center main">
       <ul class="list-unstyled clearfix">
+        {% for post in paginator.posts %}
         <li>
-          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
-          <span class="text-muted pull-right">2017-02-01</span>
+          <a href="{{ post.url }}" class="pull-left">{{ post.title }}</a>
+          <span class="text-muted pull-right">{{ post.date | date: "%m/%d/%Y" }}</span>
         </li>
-        <li>
-          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
-          <span class="text-muted pull-right">2017-02-01</span>
-        </li>
-        <li>
-          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
-          <span class="text-muted pull-right">2017-02-01</span>
-        </li>
-        <li>
-          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
-          <span class="text-muted pull-right">2017-02-01</span>
-        </li>
-        <li>
-          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
-          <span class="text-muted pull-right">2017-02-01</span>
-        </li>
+        {% endfor %}
       </ul>
       <ul class="list-unstyled page-style">
-        <a href="#">上页</a>
-        <a href="#">下页</a>
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">上页</a>
+        {% endif %}
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">下页</a>
+        {% endif %}
       </ul>
-      <!-- <ul class="page">
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-      </ul> -->
     </div>
   </div>
   {% include bdstatic.html %}
