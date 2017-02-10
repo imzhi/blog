@@ -1,31 +1,22 @@
 ---
 layout: default
+id: tag
 title: 标签
 permalink: tag.html
 ---
-<div class="w3-row w3-margin-bottom w3-text-dark-grey site-tag">
-  <div class="w3-half div-center">
-    {% for tag in site.tags %}
-    <a href="#{{ tag[0] }}" class="w3-padding-small no-decoration">#{{ tag[0] }}</a>
-    {% endfor %}
-  </div>
-</div>
-{% for tag in site.tags %}
-<div class="w3-row w3-center w3-text-dark-grey site-tag-head">
-  <div class="w3-half w3-padding-8 w3-large font-bold div-center" id="{{ tag[0] }}">
-    <a href="#{{ tag[0] }}" class="no-decoration">{{ tag[0] }}</a>
-  </div>
-</div>
-<div class="w3-row w3-center w3-text-dark-grey site-list-wrap">
-  <ul class="w3-half w3-ul div-center">
+<ul class="list-unstyled text-left text-muted tags">
+  {% for tag in site.tags %}
+  <a href="#{{ tag[0] }}">{{ tag[0] }}</a>
+  {% endfor %}
+</ul>
+<ul class="list-unstyled clearfix">
+  {% for tag in site.tags %}
+  <h4 id="{{ tag[0] }}"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></h4>
     {% for post in tag[1] %}
-    <li class="w3-padding-8 w3-padding-right w3-clear">
-      <a href="{{ post.url }}">
-        <span class="p-title w3-left">{{ post.title }}</span>
-        <span class="p-date w3-right">{{ post.date | date: "%Y年%m月%d日" }}</span>
-      </a>
-    </li>
+  <li>
+    <a href="{{ post.url }}" class="pull-left">{{ post.title }}</a>
+    <span class="text-muted pull-right">{{ post.date | date: "%m/%d/%Y" }}</span>
+  </li>
     {% endfor %}
-  </ul>
-</div>
-{% endfor %}
+  {% endfor %}
+</ul>
