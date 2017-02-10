@@ -2,6 +2,12 @@
   max-width: 750px;
 }
 
+/* 图片居中 */
+.center-image {
+  display: block;
+  margin: 0 auto;
+}
+
 /* 头部标题 */
 .header h4 {
   line-height: 40px;
@@ -44,7 +50,7 @@
   color: inherit;
 }
 
-/* 分页、所有标签 */
+/* 分页 */
 .page-style a {
   padding: 10px 15px;
   color: inherit;
@@ -57,12 +63,21 @@
 }
 
 /* 所有标签 */
+.tags {
+  margin: 20px 0;
+}
+
 .tags a {
-  padding: 10px 15px;
+  padding: 10px 5px;
   color: inherit;
   text-decoration: none;
 }
 
 .tags a:first-child {
   padding-left: 0;
+}
+
+/* 文章日期 */
+.article-date {
+  margin-bottom: 20px;
 }

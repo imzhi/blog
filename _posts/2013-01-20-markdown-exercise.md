@@ -95,9 +95,11 @@ The quick brown [fox](http://www.mozilla.org/ "firefox") jumps over the lazy dog
 **The quick brown fox jumps over the lazy dog**
 
 图片：
-\!\[Firefox]\(http://t2.qpic.cn/mblogpic/2ede4930e841f47a95d0/460 "Firefox")
+\!\[Firefox]\(https://www.baidu.com/img/bd_logo1.png "baidu")
 
-![Firefox](http://t2.qpic.cn/mblogpic/2ede4930e841f47a95d0/460 "Firefox")
+![Firefox](https://www.baidu.com/img/bd_logo1.png "baidu"){:.center-image}
+
+![](http://img04.tooopen.com/images/20130701/tooopen_20083555.jpg)
 
 链接：
 &lt;http://www.wikipedia.org&gt;

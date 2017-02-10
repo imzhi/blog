@@ -1,18 +1,15 @@
 ---
 layout: default
+id: article
 ---
-<div class="w3-row">
-  <div class="w3-half w3-center article-wrap">
-    <h1 class="w3-margin-bottom site-article-title">{{ page.title }}</h1>
-    <div class="w3-margin-bottom site-article-info"><span>{{ page.date | date: "%Y年%m月%d日" }}</span></div>
-    {% if page.tags != empty %}
-    <div class="w3-margin-bottom site-tag site-article-tag">
-      {% for tag in page.tags %}
-      <a href="{{ baseurl }}tag.html#{{ tag }}" class="no-decoration">#{{ tag }}</a>
-      {% endfor %}
-    </div>
-    {% endif %}
-    <article class="markdown-body w3-margin-top">{{ content }}</article>
-  </div>
-</div>
-
+<ul class="list-unstyled">
+  <h2 class="text-center">{{ page.title }}</h2>
+  <div class="text-muted article-date">{{ page.date | date: "%m/%d/%Y" }}</div>
+  <article class="text-left markdown-body">{{ content }}</article>
+  <ul class="list-unstyled text-left text-muted tags">
+    标签：
+    {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}tag.html#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </ul>
+</ul>
