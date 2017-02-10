@@ -1,33 +1,23 @@
 ---
 layout: default
+id: archive
 title: 存档
 permalink: archive.html
 ---
-<div class="w3-row w3-center">
-{% for post in site.posts %}
-  {% capture year_month %}{{ post.date | date: "%Y年%m月" }}{% endcapture %}
-  {% capture year_month_anchor %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
-  {% unless post.next %}
-  <div class="w3-half w3-padding-8 w3-large w3-text-dark-grey font-bold div-center">{{ year_month }}</div>
-  <div class="site-list-wrap">
-    <ul class="w3-half w3-ul div-center site-list">
-  {% else %}
-    {% capture next_year_month %}{{ post.next.date | date: "%Y年%m月" }}{% endcapture %}
-    {% if year_month != next_year_month %}
-    </ul>
-  </div>
-  <div class="w3-half w3-padding-8 w3-large w3-text-dark-grey font-bold div-center">{{ year_month }}</div>
-  <div class="site-list-wrap">
-    <ul class="w3-half w3-ul div-center site-list">
+<ul class="list-unstyled clearfix">
+  {% for post in site.posts %}
+    {% capture year_month %}{{ post.date | date: '%Y.%m' }}{% endcapture %}
+    {% if post.next %}
+      {% capture next_year_month %}{{ post.next.date | date: '%Y.%m' }}{% endcapture %}
+      {% if year_month != next_year_month %}
+  <h4 id="{{ year_month }}"><a href="#{{ year_month }}">{{ year_month }}</a></h4>
+      {% endif %}
+    {% else %}
+  <h4 id="{{ year_month }}"><a href="#{{ year_month }}">{{ year_month }}</a></h4>
     {% endif %}
-  {% endunless %}
-      <li class="w3-padding-8 w3-padding-right w3-clear">
-          <a href="{{ post.url }}" class="w3-text-dark-grey">
-            <span class="p-title w3-left">{{ post.title }}</span>
-            <span class="p-date w3-right">{{ post.date | date: "%Y年%m月%d日" }}</span>
-          </a>
-      </li>
-{% endfor %}
-    </ul>
-  </div>
-</div>
+  <li>
+    <a href="{{ post.url }}" class="pull-left">{{ post.title }}</a>
+    <span class="text-muted pull-right">{{ post.date | date: "%m/%d/%Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>

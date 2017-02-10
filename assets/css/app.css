@@ -2,6 +2,7 @@
   max-width: 750px;
 }
 
+/* 头部标题 */
 .header h4 {
   line-height: 40px;
 }
@@ -11,6 +12,7 @@
   text-decoration: none;
 }
 
+/* 头部导航栏 */
 .nav.header-nav > li {
   float: left;
 }
@@ -28,6 +30,7 @@
   text-decoration: underline;
 }
 
+/* 列表 */
 .main > ul > li {
   height: 50px;
   line-height: 50px;
@@ -38,7 +41,14 @@
   color: inherit;
 }
 
+/* 分页 */
 .page-style a {
   padding: 10px 15px;
   color: inherit;
+}
+
+/* 存档、标签页锚点 */
+.list-unstyled > h4 > a {
+  color: inherit;
+  text-decoration: none;
 }
