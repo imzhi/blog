@@ -7,17 +7,17 @@
   <meta name="author" content="{{ site.author }}" />
   <meta name="description" content="{{ site.description }}">
   <meta name="keywords" content="{{ site.keywords }}">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <title>{% if page.title %}{{ page.title}} | {% endif %}{{ site.title }}</title>
-  <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/w3.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}bootstrap/css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/github-markdown.css">
   <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/bw.css">
   <link rel="stylesheet" type="text/css" href="{{ site.asseturl }}css/app.css">
 </head>
 <body>
-  <div class="site-wrap">
+  <!-- <div class="site-wrap {{ page.layout }}">
     <header class="w3-light-grey w3-padding-16 w3-center site-header">
-      <h1 class="site-title w3-jumbo w3-padding-8">
+      <h1 class="w3-padding-8 w3-jumbo site-title">
         <a href="{{ site.baseurl }}" class="no-decoration">{{ site.author }}</a>
       </h1>
       <ul class="w3-navbar w3-center w3-text-dark-grey">
@@ -28,8 +28,60 @@
           <a href="{{ site.baseurl }}tag.html" class="w3-padding-8">标签</a>
         </li>
       </ul>
+      <div class="w3-row w3-padding-8">
+        <div class="w3-half w3-center div-center">
+          <div class="w3-xxlarge">你好，这个世界？你好吗？我要赵云</div>
+          <div class="w3-clear">
+            <div class="w3-left">2017年02月09日</div>
+            <div class="w3-right">@imzhi</div>
+          </div>
+        </div>
+      </div>
     </header>
     <div class="site-main">{{ content }}</div>
+  </div> -->
+
+  <div class="container">
+    <header class="header">
+      <ul class="nav pull-right header-nav">
+        <li class="active"><a href="{{ site.baseurl }}">首页</a></li>
+        <li><a href="{{ site.baseurl }}archive.html">存档</a></li>
+        <li><a href="{{ site.baseurl }}tag.html">标签</a></li>
+      </ul>
+      <h4><a href="{{ site.baseurl }}" class="text-muted">{{ site.author }}</a></h4>
+    </header>
+    <div class="text-center main">
+      <ul class="list-unstyled clearfix">
+        <li>
+          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
+          <span class="text-muted pull-right">2017-02-01</span>
+        </li>
+        <li>
+          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
+          <span class="text-muted pull-right">2017-02-01</span>
+        </li>
+        <li>
+          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
+          <span class="text-muted pull-right">2017-02-01</span>
+        </li>
+        <li>
+          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
+          <span class="text-muted pull-right">2017-02-01</span>
+        </li>
+        <li>
+          <a href="#" class="pull-left">你好你好你好你好你好你好你好你好你好你好</a>
+          <span class="text-muted pull-right">2017-02-01</span>
+        </li>
+      </ul>
+      <ul class="list-unstyled page-style">
+        <a href="#">上页</a>
+        <a href="#">下页</a>
+      </ul>
+      <!-- <ul class="page">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul> -->
+    </div>
   </div>
   {% include bdstatic.html %}
 </body>
