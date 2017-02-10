@@ -12,4 +12,7 @@ id: article
     <a href="{{ site.baseurl }}tag.html#{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </ul>
+  {% if page.comments %}
+  {% include disqus.html %}
+  {% endif %}
 </ul>
