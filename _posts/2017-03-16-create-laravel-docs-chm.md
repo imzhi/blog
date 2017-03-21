@@ -1,14 +1,16 @@
 ---
 layout: article
-title: 制作Laravel中文文档的CHM帮助文档
-tags: CHM
+title: Laravel中文文档的CHM离线版
+tags: CHM Laravel
 ---
 
-制作 Laravel 中文文档的 CHM 帮助文档，方便学习。
+做项目的时候常常要查阅 Laravel 官方文档，因此制作了一个 Laravel 中文文档的 CHM 离线版，已分享在[百度网盘][baidu_disk]上。
 
-## 什么是 CHM？
+Laravel 中文文档使用的 Laravel China 社区翻译整理的[版本][laravel-docs]。
 
-CHM 文件格式是微软于 1998 年推出的基于 HTML 文件特性的帮助文件系统。被 IE 浏览器支持的JavaScript, VBScript, ActiveX, Java Applet, Flash, 常见图形文件(GIF、JPEG、PNG)、音频视频文件(MID、WAV、AVI)等等，CHM同样支持，并可以通过 URL 与 Internet 联系在一起。
+制作 CHM 文件使用的软件是 [Microsoft HTML Help Workshop][hhw]，参考了 CSDN 上的这篇文章 [HTML Help WorkShop制作chm图解][csdn]，里面有很详细的步骤描述。
 
-## HHW 制作 CHM 的步骤
-
+[baidu_disk]: https://pan.baidu.com/s/1dFN2pVF
+[hhw]: https://www.microsoft.com/en-us/download/details.aspx?id=21138
+[csdn]: http://blog.csdn.net/zhoufoxcn/article/details/2213955
+[laravel-docs]: https://github.com/laravel-china/laravel-docs
