@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Markdown 练习
-tags: markdown
+tags: Markdown
 ---
 一级标题：
 \# The quick brown fox jumps over the lazy dog
