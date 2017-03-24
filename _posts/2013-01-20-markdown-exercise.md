@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Markdown 练习
+title: Markdown练习
 tags: Markdown
 ---
 一级标题：

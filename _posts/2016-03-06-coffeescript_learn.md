@@ -1,6 +1,6 @@
 ---
 layout: article
-title: CoffeeScript 学习
+title: CoffeeScript学习
 tags: JavaScript CoffeeScript
 ---
 
