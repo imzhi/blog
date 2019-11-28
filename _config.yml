@@ -13,3 +13,5 @@ description:
 keywords:
 
 gems: [jekyll-paginate]
+
+theme: jekyll-theme-cayman
