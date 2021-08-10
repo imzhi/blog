@@ -14,4 +14,4 @@ keywords:
 
 gems: [jekyll-paginate]
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-hacker
